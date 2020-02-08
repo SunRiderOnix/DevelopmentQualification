@@ -3417,9 +3417,9 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color:#757171f8;
   text-decoration: none;
-  background-color: #007bff;
+  background-color: #d1ecf1;
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -4782,6 +4782,7 @@ input[type="button"].btn-block {
 
 .card-text:last-child {
   margin-bottom: 0;
+  font-size:14pt;
 }
 
 .card-link:hover {
