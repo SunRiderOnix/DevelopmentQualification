@@ -3408,6 +3408,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  font-size:14pt;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
@@ -4248,6 +4249,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-size:14pt;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4362,6 +4364,7 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -10235,4 +10238,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+#topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
 /*# sourceMappingURL=bootstrap.css.map */
