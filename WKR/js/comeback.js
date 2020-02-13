@@ -1,13 +1,20 @@
-$(function() {
+jQuery(document).ready(function() {
+  
+    var btn = $('#button');
+  
     $(window).scroll(function() {
-    if($(this).scrollTop() != 0) {
-    $('#topNubex').fadeIn();
-    } else {
-    $('#topNubex').fadeOut();
-    }
+      if ($(window).scrollTop() > 200) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
     });
-    $('#topNubex').click(function() {
-    $('body,html').animate({scrollTop:0},700);
+  
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
     });
-    });
-    
+  
+  });
+
+  
