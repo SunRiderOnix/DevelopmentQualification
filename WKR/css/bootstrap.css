@@ -3400,25 +3400,26 @@ input[type="button"].btn-block {
 .dropdown-item {
   display: block;
   width: 100%;
+  min-width:350px;
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
   color: #212529;
   text-align: inherit;
-  white-space: nowrap;
+
   background-color: transparent;
   border: 0;
-  font-size:14pt;
+  font-size:12pt;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #e1f0ff;
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  color:#757171f8;
+  color:#16181b;
   text-decoration: none;
   background-color: #d1ecf1;
 }
