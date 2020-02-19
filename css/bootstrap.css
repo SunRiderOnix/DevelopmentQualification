@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -545,6 +545,7 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top:15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -3237,10 +3238,10 @@ input[type="button"].btn-block {
   
  /* margin: 0.125rem 0 0;*/ 
   font-size: 1rem;
-  color: #212529;
+  color: #490D36;
   text-align: left;
   list-style: none;
-  background-color: #3e0f8a;
+  background-color: #67afcb;
   background-clip: padding-box;
 
 }
@@ -3404,7 +3405,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: white;
+  color: #000000;
   text-align: inherit;
 
   background-color: transparent;
@@ -4306,8 +4307,8 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #007bff;
+  color: #000000;
+  background-color: #67afcb;
 }
 
 .nav-fill .nav-item {
@@ -4343,6 +4344,7 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  min-width:500px;
 }
 
 .navbar .container,
@@ -4645,6 +4647,7 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
+  color:rgb(0, 0, 0);
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -4800,8 +4803,8 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #00000008;
+  border-bottom: 1px solid #00000020;
 }
 
 .card-header:first-child {
@@ -6418,6 +6421,7 @@ a.close.disabled {
 
 .carousel {
   position: relative;
+  margin-bottom:40px;
 }
 
 .carousel.pointer-event {
