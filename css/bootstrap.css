@@ -4303,6 +4303,7 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link {
   border-radius: 0.25rem;
+  color: #000000;
 }
 
 .nav-pills .nav-link.active,
@@ -4982,10 +4983,10 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
+  padding:  0rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #E4F1F6;;
   border-radius: 0.25rem;
 }
 
