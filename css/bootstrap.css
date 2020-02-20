@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  
+  background-repeat:no-repeat;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6420,6 +6420,7 @@ a.close.disabled {
   color: #212529;
 }
 
+
 .carousel {
   position: relative;
   margin-bottom:40px;
@@ -8111,9 +8112,9 @@ button.bg-dark:focus {
   height: 100vh !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .vh-100 {
-    height:150vh !important;
+    height:auto !important;
   }
 }
 
@@ -10290,4 +10291,18 @@ a.text-dark:hover, a.text-dark:focus {
   opacity:1;
   visibility: visible;
 }
+
+/*
+@media (max-height:768px) {
+  .carousel{
+    height:200px;
+    
+  }
+  .card-body{
+    height:60vh;
+  }
+  .card{
+    margin-top:10vh;
+  }
+}*/
 /*# sourceMappingURL=bootstrap.css.map */
