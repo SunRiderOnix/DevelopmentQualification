@@ -3238,10 +3238,10 @@ input[type="button"].btn-block {
   
  /* margin: 0.125rem 0 0;*/ 
   font-size: 1rem;
-  color: #490D36;
+  color: #2A293E;
   text-align: left;
   list-style: none;
-  background-color: #67afcb;
+  background-color: #f7bc64 ;
   background-clip: padding-box;
 
 }
@@ -4309,7 +4309,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #000000;
-  background-color: #67afcb;
+  background-color: #FCBA12;
 }
 
 .nav-fill .nav-item {
@@ -4751,9 +4751,9 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #FEF7DC;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #ffd7b3;
   border-radius: 0.25rem;
 }
 
@@ -4777,6 +4777,8 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background-color: #FFF7D6;
+  border-color:#ffdd57;
 }
 
 .card-title {
@@ -4804,7 +4806,7 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #00000008;
+  background-color: #FFF4C7;
   border-bottom: 1px solid #00000020;
 }
 
@@ -4986,7 +4988,7 @@ input[type="button"].btn-block {
   padding:  0rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #E4F1F6;;
+  background-color: #ffe59e;
   border-radius: 0.25rem;
 }
 
@@ -10291,6 +10293,11 @@ a.text-dark:hover, a.text-dark:focus {
   opacity:1;
   visibility: visible;
 }
+
+.navbar-expand-xl  {
+  background-color:#f7bc64;
+}
+
 
 /*
 @media (max-height:768px) {
