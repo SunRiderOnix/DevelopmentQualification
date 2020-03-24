@@ -10316,8 +10316,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .img-body {
 
-
-  background-image: url(../image/10.jpg);
+  background-image: url(../image/10.png);
   box-sizing:border-box;
   background-size: cover;
   box-sizing:content-box;
