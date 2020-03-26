@@ -4872,10 +4872,12 @@ input[type="button"].btn-block {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
+
 .card-deck .card {
   margin-bottom: 0px;
   text-align: center;
 }
+
 
 @media (min-width: 768px) {
   .card-deck {
