@@ -4758,7 +4758,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
    border: 2px solid rgb(232, 235, 253); 
   border-radius: 0.25rem;
-  box-shadow:0 0 15px 0 black;
+  box-shadow:0 0 7px 0 black;
 }
 
 .card > hr {
@@ -6437,7 +6437,7 @@ a.close.disabled {
 .carousel {
   position: relative;
   margin-bottom:40px;
-  box-shadow:0 0 15px 0 black;
+  box-shadow:0 0 10px 0 black;
 }
 
 .carousel.pointer-event {
@@ -10312,7 +10312,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-expand-xl  {
   background-color:rgb(228, 235, 253);
-  box-shadow: 0 0 15px 0 black;
+  box-shadow: 0 0 7px 0 black;
 }
 .navbar-expand-xl .navbar-expand-xl   {
   background-color:rgb(228, 235, 253);
