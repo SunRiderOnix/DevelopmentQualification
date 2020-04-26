@@ -10319,19 +10319,14 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 0 0 0 0 black;
 }
 
-@media (max-height:768px)  {
-  .img-body{
-    height: calc(10% + 768px) !important;
-  }
-}
 
-@media (min-height: 576px) and (max-width:768px) {
+/*@media (min-height: 576px) and (max-width:768px) {
 
 .img-body {
     height: calc(100%*1.2) !important;
 }
 
-}
+}*/
 
 .img-body {
 
@@ -10365,4 +10360,12 @@ padding-top:70px;
 }
 #list-group {
   box-shadow: 0 0 0 0 black;
+}
+
+.dropdown:hover > .dropdown-menu{
+  display: block;
+  }
+
+#collapseFour .card-body{
+ flex-direction:column;
 }

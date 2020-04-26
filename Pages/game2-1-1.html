@@ -1,0 +1,178 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+     p{
+         font-size:16px;
+         font-family:Arial, Helvetica, sans-serif;
+         padding:0px;
+         margin:0px;
+         max-width:150px;
+
+     }
+     .draggable{
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        width:300px;
+        background-color:white;
+        padding:1rem 0;
+        border:1px solid black; 
+        margin:0.5rem; 
+        margin-left:0px;
+        margin-right:0px;
+         
+     }
+     .uponMe{
+        text-align:center !important;
+        display:flex !important;
+        justify-content:center !important;
+        width:300px !important; 
+        background-color:rgba(0, 192, 0, 0.842) !important;
+        padding:1rem 0 !important;
+        border:1px solid black !important; 
+        margin:0.5rem !important; 
+        margin-left:0px !important;
+        margin-right:0px !important;
+     }
+     .fail{
+        text-align:center !important;
+        display:flex !important;
+        justify-content:center !important;
+        width:300px !important; 
+        background-color:rgb(255, 5, 5) !important;
+        padding:1rem 0 !important;
+        border:1px solid black !important; 
+        margin:0.5rem !important; 
+        margin-left:0px !important;
+        margin-right:0px !important;
+     }
+     .droppable
+     {
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        width:300px;
+        background-color:white;
+        padding:1rem 0;
+        border:1px solid black; 
+        margin:0.5rem; 
+        margin-left:0px;
+        margin-right:0px;
+     }
+     #drop1,#drop2,
+     #drop3,#drop4,
+     #drag1,#drag2,
+     #drag3,#drag4{
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        width:300px;
+        background-color:white;
+        padding:1rem 0;
+        border:1px solid black; 
+        margin:0.5rem; 
+        margin-left:0px;
+        margin-right:0px; 
+     }
+     
+     
+     .container{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        justify-content: space-between;
+        margin:0 3rem;
+     }
+
+
+    </style>
+    <script>
+        /* Polyfill service v3.25.1
+ * For detailed credits and licence information see https://github.com/financial-times/polyfill-service.
+ * 
+ * UA detected: opera/67.0.0
+ * Features requested: Element.prototype.closest
+ *  */
+
+(function(undefined) {
+
+/* No polyfills found for current settings */
+
+})
+.call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
+    </script>
+
+    
+</head>
+<body>
+    <div class="container">
+        <div id="dragObject" style="text-align:center;max-width: 100%;flex-direction:column;display: flex;width: 300px;">
+            
+            <div class="draggable" id="drag4" >
+                <p style="user-select: none;">4</p>
+            </div>
+            
+            <div class="draggable" id="drag2" >
+                <p style="user-select: none;">2</p>
+            </div>
+            <div class="draggable" id="drag1" >
+                <p  style="user-select: none;">1</p>
+            </div>
+            
+            <div class="draggable" id="drag3" >
+                <p  style="user-select: none;">3</p>
+            </div>
+
+        </div>
+        <div style="text-align:center;max-width: 100%;flex-direction:column;display: flex;width: 300px;">
+            
+        
+            
+            <div class="droppable" id="drop3" >
+                <p style="user-select: none;">3</p>
+            </div>
+            
+            
+            
+            <div class="droppable" id="drop4" >
+                <p style="user-select: none;">4</p>
+            </div>
+
+            <div class="droppable" id="drop2" >
+                <p style="user-select: none;">2</p>
+            </div>
+            
+            <div class="droppable" id="drop1" >
+                <p style="user-select: none;">1</p>
+            </div>
+    </div>
+    </div>
+    <div style=" text-align:center;max-width: 100%;flex-direction:column;display: none;">
+    <a href="game2-1-1.html"><button class="reload" > Попробуй ещё раз</button></a>
+    </div>  
+<script>
+    onload = function() {
+        var dragObjects = document.getElementsByClassName('draggable');
+        for(var i=0; i<dragObjects.length; i++) {
+            new DragObject(dragObjects[i])
+        }
+        
+        new DropTarget(document.getElementById('drop1'));
+        new DropTarget(document.getElementById('drop2'));
+        new DropTarget(document.getElementById('drop3'));
+        new DropTarget(document.getElementById('drop4'));
+        
+        
+    }
+</script>
+
+<script src="../js/DragObject.js"></script>
+<script src="../js/DropTarget.js"></script>
+<script src="../js/dragMaster.js"></script>
+<script src="../js/helpers.js"></script>
+</body>
+</html>
