@@ -196,6 +196,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  user-select: none;
 }
 
 svg {
@@ -4255,6 +4256,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1rem;
   font-size:14pt;
+  user-select: none;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -5001,10 +5003,12 @@ input[type="button"].btn-block {
   margin-bottom: 1rem;
   list-style: none;
   border-radius: 0.25rem;
+  user-select: none;
 }
 
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.5rem;
+  user-select: none;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -6635,6 +6639,7 @@ a.close.disabled {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
+  user-select: none;
 }
 
 @-webkit-keyframes spinner-border {
@@ -10214,6 +10219,7 @@ a.text-dark:hover, a.text-dark:focus {
   tr,
   img {
     page-break-inside: avoid;
+  
   }
   p,
   h2,
@@ -10368,4 +10374,7 @@ padding-top:70px;
 
 #collapseFour .card-body{
  flex-direction:column;
+}
+.listExc{
+  padding-left:20px;
 }

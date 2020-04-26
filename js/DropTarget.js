@@ -13,10 +13,10 @@ function DropTarget(element) {
 	this.accept = function(dragObject) {
 	
 		if (
-		 ((coord.top==16) && (coord2.top==84)) ||
-		 ((coord.top==84) && (coord2.top==152)) ||
-		 ((coord.top==152) && (coord2.top==220)) ||
-		 ((coord.top==220) && (coord2.top==16)) 
+		 ((coord.x==56) && (coord2.x==258)) ||
+		 ((coord.x==258) && (coord2.x==460)) ||
+		 ((coord.x==460) && (coord2.x==662)) ||
+		 ((coord.x==662) && (coord2.x==56)) 
 		 ) {
 		this.onEnter();
 		dragObject.onDragFail()

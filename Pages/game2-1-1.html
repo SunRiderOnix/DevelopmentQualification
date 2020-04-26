@@ -7,14 +7,13 @@
          font-family:Arial, Helvetica, sans-serif;
          padding:0px;
          margin:0px;
-         max-width:150px;
 
      }
      .draggable{
         text-align:center;
         display:flex;
         justify-content:center;
-        width:300px;
+        width:200px;
         background-color:white;
         padding:1rem 0;
         border:1px solid black; 
@@ -27,7 +26,7 @@
         text-align:center !important;
         display:flex !important;
         justify-content:center !important;
-        width:300px !important; 
+        width:200px !important; 
         background-color:rgba(0, 192, 0, 0.842) !important;
         padding:1rem 0 !important;
         border:1px solid black !important; 
@@ -39,7 +38,7 @@
         text-align:center !important;
         display:flex !important;
         justify-content:center !important;
-        width:300px !important; 
+        width:200px !important; 
         background-color:rgb(255, 5, 5) !important;
         padding:1rem 0 !important;
         border:1px solid black !important; 
@@ -52,7 +51,7 @@
         text-align:center;
         display:flex;
         justify-content:center;
-        width:300px;
+        width:200px;
         background-color:white;
         padding:1rem 0;
         border:1px solid black; 
@@ -67,7 +66,7 @@
         text-align:center;
         display:flex;
         justify-content:center;
-        width:300px;
+        width:200px;
         background-color:white;
         padding:1rem 0;
         border:1px solid black; 
@@ -81,7 +80,7 @@
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: row;
-        flex-direction: row;
+        flex-direction: column;
         padding-left: 0;
         margin-bottom: 0;
         justify-content: space-between;
@@ -110,44 +109,44 @@
 </head>
 <body>
     <div class="container">
-        <div id="dragObject" style="text-align:center;max-width: 100%;flex-direction:column;display: flex;width: 300px;">
+        <div id="dragObject" style="text-align:center;max-width: 100%;flex-direction:row;display: flex;min-width: 800px;">
             
             <div class="draggable" id="drag4" >
-                <p style="user-select: none;">4</p>
+                <p style="user-select: none;">Операционная система</p>
             </div>
             
             <div class="draggable" id="drag2" >
-                <p style="user-select: none;">2</p>
+                <p style="user-select: none;">Microsoft Windows</p>
             </div>
             <div class="draggable" id="drag1" >
-                <p  style="user-select: none;">1</p>
+                <p  style="user-select: none;">Android</p>
             </div>
             
             <div class="draggable" id="drag3" >
-                <p  style="user-select: none;">3</p>
+                <p  style="user-select: none;">Linux</p>
             </div>
 
         </div>
-        <div style="text-align:center;max-width: 100%;flex-direction:column;display: flex;width: 300px;">
+        <div style="text-align:center;max-width: 100%;flex-direction:row;display: flex;min-width: 800px;">
             
         
             
             <div class="droppable" id="drop3" >
-                <p style="user-select: none;">3</p>
+                <p style="user-select: none;">комплекс программ, обеспечивающий управление аппаратными средствами компьютера, организующий работу с файлами и выполнение прикладных программ, осуществляющий ввод и вывод данных.</p>
             </div>
             
             
             
             <div class="droppable" id="drop4" >
-                <p style="user-select: none;">4</p>
+                <p style="user-select: none;">комплекс программ, обеспечивающий управление аппаратными средствами компьютера, организующий работу с файлами и выполнение прикладных программ, осуществляющий ввод и вывод данных.</p>
             </div>
 
             <div class="droppable" id="drop2" >
-                <p style="user-select: none;">2</p>
+                <p style="user-select: none;">это семейство операционных систем компании Microsoft. Была создана для компьютеров IBM с поддержкой MS-DOS.</p>
             </div>
             
             <div class="droppable" id="drop1" >
-                <p style="user-select: none;">1</p>
+                <p style="user-select: none;">операционная система, основана на ядре Linux, предназначена для смартфонов, планшетов, электронных книг, цифровых проигрывателей, наручных часов, фитнесс-браслетов, игровых приставок, ноутбуков, нетбуков, смартбуков, очков Google Glass, телевизоров и других устройств (в 2015 году появилась поддержка автомобильных развлекательных систем и бытовых роботов).</p>
             </div>
     </div>
     </div>
