@@ -1,6 +1,10 @@
 var coord
 var coord2
+var coord21=[ ]
+var coord11=[ ]
 let i = 0
+
+window.onresize ()
 
 var dragMaster = (function() {
 
@@ -41,7 +45,7 @@ var dragMaster = (function() {
 			// запомнить, с каких относительных координат начался перенос
 			var mouseOffset = getMouseOffset(elem, mouseDownAt.x, mouseDownAt.y)
 			
-			coord = elem.id
+			coord = elem.getBoundingClientRect()
 			mouseDownAt = null // запомненное значение больше не нужно, сдвиг уже вычислен
 			
 			dragObject.onDragStart(mouseOffset) // начали
@@ -71,14 +75,18 @@ var dragMaster = (function() {
     function mouseUp(){
 		if (!dragObject) { // (1)
 			mouseDownAt = null
+			
 		} else {
 			// (2)
+			
 			if (currentDropTarget) {
 				currentDropTarget.accept(dragObject)
 				dragObject.onDragSuccess(currentDropTarget)
+
 			} else {
 				dragObject.onDragFail()
 			}
+			
 
 			dragObject = null
 		}
@@ -117,7 +125,7 @@ var dragMaster = (function() {
 			if (elem.dropTarget && elem.dropTarget.canAccept(dragObject)) {
 				
 				
-						coord2 = elem.id
+						coord2 = elem.getBoundingClientRect()
 					 
 				
 				

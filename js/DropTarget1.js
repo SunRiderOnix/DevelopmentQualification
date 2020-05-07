@@ -16,12 +16,22 @@ function DropTarget(element) {
 	
 	this.accept = function(dragObject) {
 
-		if ( ( (coord=="drag4") && (coord2=="drop4") ) || ((coord=="drag3") && (coord2=="drop3")) || ((coord=="drag2") && (coord2=="drop2")) || ((coord=="drag1") && (coord2=="drop1")) ) 
-			 {
+		
+		
+		
+		
+
+		if (
+		 ((coord.x==coord11[0]) && (coord2.x==coord21[1])) ||
+		 ((coord.x==coord11[1]) && (coord2.x==coord21[2])) ||
+		 ((coord.x==coord11[2]) && (coord2.x==coord21[3])) ||
+		 ((coord.x==coord11[3]) && (coord2.x==coord21[0])) 
+		 ) {
 		this.onEnter();
 		dragObject.onDragFail()
 		
-	
+		
+		//alert("Акцептор '"+coord.top+"': принял объект '"+coord2.top+"'")
 		}
 		else{
 			dragObject.onDragFail();
@@ -30,11 +40,6 @@ function DropTarget(element) {
 			/*if (document.getElementsByTagName('div').className == 'fail') {
             document.getElementsByClassName('reload').style.display="flex;"
         }*/
-		}
-		if (document.getElementsByClassName('uponMe')["length"] == 4) {
-			
-			setTimeout("alert('Вы прошли тест, сейчас вы будете перенаправлены на страницу');",2000);
-			setTimeout("history.back()",4000);
 		}
 		i = 0;
 	}

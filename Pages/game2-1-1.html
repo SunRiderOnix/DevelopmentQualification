@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    
     <style>
      p{
          font-size:16px;
@@ -16,9 +17,9 @@
         width:200px;
         background-color:white;
         padding:1rem;
-        border:1px solid black; 
+        border: 1px solid #0062cc;
         margin:0.5rem; 
-        margin-left:0px;
+        
         margin-right:0px;
          
      }
@@ -27,11 +28,10 @@
         display:flex !important;
         justify-content:center !important;
         width:200px !important; 
-        background-color:rgba(0, 192, 0, 0.842) !important;
+        background-color:rgba(83, 250, 83, 0.76) !important;
         padding:1rem  !important;
-        border:1px solid black !important; 
+        border: 1px solid #0062cc !important; 
         margin:0.5rem !important; 
-        margin-left:0px !important;
         margin-right:0px !important;
      }
      .fail{
@@ -41,9 +41,9 @@
         width:200px !important; 
         background-color:rgb(255, 5, 5) !important;
         padding:1rem  !important;
-        border:1px solid black !important; 
+        border: 1px solid #0062cc !important; 
         margin:0.5rem !important; 
-        margin-left:0px !important;
+        /*margin-left:0px !important;*/
         margin-right:0px !important;
      }
      .droppable
@@ -54,9 +54,9 @@
         width:200px;
         background-color:white;
         padding:1rem;
-        border:1px solid black; 
+        border: 1px solid #0062cc;
         margin:0.5rem; 
-        margin-left:0px;
+        
         margin-right:0px;
      }
      #drop1,#drop2,
@@ -69,10 +69,10 @@
         width:200px;
         background-color:white;
         padding:1rem;
-        border:1px solid black; 
+        border: 1px solid #0062cc;
         margin:0.5rem; 
-        margin-left:0px;
         margin-right:0px; 
+        border-radius: 50px;
      }
      
      
@@ -150,9 +150,11 @@
             </div>
     </div>
     </div>
-    <div style=" text-align:center;max-width: 100%;flex-direction:column;display: none;">
+    <div style=" text-align:center;max-width: 100%;flex-direction:column;">
     <a href="game2-1-1.html"><button class="reload" > Попробуй ещё раз</button></a>
     </div>  
+
+    
 <script>
     onload = function() {
         var dragObjects = document.getElementsByClassName('draggable');
@@ -166,8 +168,10 @@
         new DropTarget(document.getElementById('drop4'));
         
         
+        
     }
 </script>
+
 
 <script src="../js/DragObject.js"></script>
 <script src="../js/DropTarget.js"></script>
