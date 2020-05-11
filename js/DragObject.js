@@ -1,4 +1,11 @@
 function DragObject(element) {
+	
+	if (document.getElementsByClassName('uponMe')["length"] == 4) {
+		
+		return
+
+	}
+
 	element.dragObject = this
 	
 	dragMaster.makeDraggable(element)
@@ -7,6 +14,11 @@ function DragObject(element) {
 	var mouseOffset
 	
 	this.onDragStart = function(offset) {
+		if (document.getElementsByClassName('uponMe')["length"] == 4) {
+		
+			return
+	
+		}
 		var s = element.style
 		rememberPosition = {top: s.top, left: s.left, position: s.position}
 		s.position = 'absolute'
@@ -15,14 +27,17 @@ function DragObject(element) {
 	}
 		
 	this.hide = function() {
+		
 		element.style.display = 'none' 
 	}
 	
 	this.show = function() {
+		
 		element.style.display = '' 
 	}
 	
 	this.onDragMove = function(x, y) {
+		
 		element.style.top =  y - mouseOffset.y +'px'
 		element.style.left = x - mouseOffset.x +'px'
 		
@@ -31,6 +46,7 @@ function DragObject(element) {
 	this.onDragSuccess = function(dropTarget) { }
 	
 	this.onDragFail = function() {
+		
 		var s = element.style
 		s.top = rememberPosition.top
 		s.left = rememberPosition.left
@@ -39,6 +55,7 @@ function DragObject(element) {
 	}
 	
 	this.toString = function() {
+		
 		return element.id
 	}
 }

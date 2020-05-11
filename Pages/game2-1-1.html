@@ -87,23 +87,96 @@
         margin:0;
      }
 
+    .reload{
+        display:none;
+    }
+
+     .btn {
+
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+     
+
 
     </style>
-    <script>
-        /* Polyfill service v3.25.1
- * For detailed credits and licence information see https://github.com/financial-times/polyfill-service.
- * 
- * UA detected: opera/67.0.0
- * Features requested: Element.prototype.closest
- *  */
-
-(function(undefined) {
-
-/* No polyfills found for current settings */
-
-})
-.call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
-    </script>
+    
 
     
 </head>
@@ -151,7 +224,11 @@
     </div>
     </div>
     <div style=" text-align:center;max-width: 100%;flex-direction:column;">
-    <a href="game2-1-1.html"><button class="reload" > Попробуй ещё раз</button></a>
+    <a href="javascript:window.top.location.href='page2-1.html'" class="reload" > 
+        <button  class=" btn btn-primary " > 
+            Завершить
+        </button>
+    </a>
     </div>  
 
     
@@ -166,9 +243,7 @@
         new DropTarget(document.getElementById('drop2'));
         new DropTarget(document.getElementById('drop3'));
         new DropTarget(document.getElementById('drop4'));
-        
-        
-        
+           
     }
 </script>
 

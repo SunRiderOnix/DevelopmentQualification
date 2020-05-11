@@ -1,3 +1,5 @@
+
+
 var coord
 var coord2
 let i = 0
@@ -9,6 +11,11 @@ var dragMaster = (function() {
 
 	var currentDropTarget
 	
+	if (document.getElementsByClassName('uponMe')["length"] == 4) {
+		
+		return
+
+	}
 	
 	
 	function mouseDown(e) {
