@@ -10,7 +10,7 @@
          margin:0px;
 
      }
-     .right,.no-right{
+     #right,#no-right{
         text-align:center;
         display:flex;
         justify-content:center;
@@ -19,7 +19,7 @@
         padding:1rem;
         border: 1px solid #0062cc;
         margin:0.5rem; 
-        
+        border-radius: 50px;
         margin-right:0px;
          
      }
@@ -33,6 +33,7 @@
         border: 1px solid #0062cc !important; 
         margin:0.5rem !important; 
         margin-right:0px !important;
+        border-radius: 50px;
      }
      .fail{
         text-align:center !important;
@@ -45,6 +46,7 @@
         margin:0.5rem !important; 
         /*margin-left:0px !important;*/
         margin-right:0px !important;
+        border-radius: 50px;
      }
      .droppable
      {
@@ -184,26 +186,18 @@ fieldset:disabled a.btn {
     <div class="container">
         <div id="ClickObject" >
             
-            <div class="right" style="position: absolute; left:5%; top:5%;cursor: pointer;" >
-                <p style="user-select: none;">Жесткий диск</p>
-            </div>
             
-            <div class="no-right" style="position: absolute; left:10%; top:30%;cursor: pointer;"  >
-                <p style="user-select: none;">Монитор</p>
-            </div>
+            <p id="right" style="position: absolute; left:5%; top:5%;cursor: pointer; user-select: none;">Жесткий диск</p>
+        
+            <p id="no-right" style="position: absolute; left:10%; top:30%;cursor: pointer;user-select: none;"  >Монитор</p>
+        
+            <p id="right"  style="position: absolute; left:60%; bottom:20%;cursor: pointer;user-select: none;" >Видеокарта</p>
+        
+            <p id="no-right"  style="position: absolute; left:45%; top:7%;cursor: pointer;user-select: none;">Микрофон</p>
 
-            <div class="right"  style="position: absolute; left:60%; bottom:20%;cursor: pointer;" >
-              <p style="user-select: none;">Видеокарта</p>
-            </div>
-            <div class="no-right"  style="position: absolute; left:45%; top:7%;cursor: pointer;" >
-              <p style="user-select: none;">Микрофон</p>
-            </div>
-            <div class="right"  style="position: absolute; right:50%; bottom:25%;cursor: pointer;" >
-              <p style="user-select: none;">Процессор</p>
-            </div>
-            <div class="right"  style="position: absolute; right:20%; bottom:50%;cursor: pointer;" >
-              <p style="user-select: none;">Оперативная память</p>
-            </div>
+            <p id="right"  style="position: absolute; right:50%; bottom:25%;cursor: pointer;user-select: none;">Процессор</p>
+
+            <p id="right"  style="position: absolute; right:20%; bottom:50%;cursor: pointer;user-select: none;">Оперативная память</p>
             
 
         </di>

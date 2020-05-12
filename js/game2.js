@@ -1,13 +1,37 @@
 var tree = document.getElementById('ClickObject');
-
-tree.onclick = function(evt) {
-  var evt = evt || event;
-  var target = evt.target || evt.srcElement;
-  
-  var node = target.getElementsByClassName('right')[0];
-  if (!node){ 
-      return;
+let i
+let j
+tree.onclick = function(event){
+  event = event || window.event;
+  if (!event.target) {
+      event.target = event.srcElement;
   }
-  node.style.display = " ";
+  //alert(event.target.id);
   
+  let start = Date.now(); 
+
+  if (event.target.id == "right"){
+   i = 1;
+   j++;
+   
+   let timer =  setInterval(function(){
+    let timePassed = Date.now() - start;
+
+
+    if (timePassed >= 300) {
+      clearInterval(timer); // закончить анимацию через 2 секунды
+    return;
+  }
+
+   
+    
+    i = i-0.50;
+    event.target.style.opacity = i;
+    
+
+    },100);
+  }
+  else {
+    event.target.className = 'fail';
+  }
 }
