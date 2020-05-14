@@ -1,0 +1,420 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    
+    <style>
+
+     .uponMe{
+        background-color:rgba(83, 250, 83, 0.76) !important;
+     }
+     .fail{
+        background-color:rgb(255, 5, 5) !important;
+     }
+    
+     
+     .container{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        justify-content: space-between;
+        margin:0;
+     }
+
+    
+
+     .btn {
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.clickob{
+  text-align:center;
+        display:flex;
+        justify-content:center;
+        width:200px;
+        background-color:white;
+        padding:1rem;
+        border: 1px solid #0062cc;
+        margin:0.5rem; 
+        border-radius: 50px;
+        margin-right:0px;
+}
+
+
+table tr td{
+  text-align: center;
+  border-collapse: collapse;
+  width: 25px;
+  height:25px
+}
+table{
+  text-align: center;
+  border-collapse: collapse;
+}
+
+
+
+
+
+    </style>
+    
+
+    
+</head>
+<body>
+    <div class="container">
+      <button type="button" id="help" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="position: absolute; right:5%; bottom:5%;">
+        ?
+      </button>
+      <!-- Modal -->
+<div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Игра: Кроссворд</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Введите правильный ответ (В любом регистре)</p>
+        <p><b>Вопросы:</b></p>
+        <p>1.Средство для создания простейших изображений.</p>
+          <p>2.Программа для просмотра изображений.</p>
+          <p>3.Программа для просмотра гипертекстовых страниц созданная компанией Google</p>
+          <p>4.Текстовый редактор.</p>
+          <p>5.Программа создания презентаций.</p>
+          <p>6.Медиаплеер.</p>
+          <p>7.Программа позволяющая работать c табличными данными, строить диаграммы.</p>
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <div id="ClickObject" style="display: flex; justify-content: center; vertical-align:middle;" >
+          
+           
+         <table style="border-collapse: collapse;">
+          <!--Заголовок-->
+          <tr>
+            <td ></td>
+            <td >1</td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--1 строка-->
+          <tr>
+            <td ></td>
+            <td ><input  autocomplete="off"  id="word-1-symbol-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td >7</td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--2 строка-->
+           <tr>
+            <td >2</td>
+            <td ><input autocomplete="off" id="word-1-2-symbol-2-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-2-symbol-2" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-2-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-2-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-2-7-symbol-5-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-2-symbol-6" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td >5</td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--3 строка-->
+           <tr>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-1-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-7-symbol-2" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--4 строка-->
+           <tr>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-1-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td >3</td>
+            <td ><input autocomplete="off" id="word-3-7-symbol-1-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-3-symbol-2" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-3-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-3-5-symbol-4-2" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-3-symbol-5" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-3-symbol-6" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td></td>
+            <td></td>
+          </tr>
+           <!--5 строка-->
+           <tr>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-1-symbol-5" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-7-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--6 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-7-symbol-5" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--7 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-5" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--8 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td >4</td>
+            <td ><input autocomplete="off" id="word-4-symbol-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-symbol-2" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-5-symbol-5-6" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-symbol-6" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-4-symbol-7" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--9 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-7" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--10 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td >6</td>
+            <td ><input autocomplete="off" id="word-6-symbol-1" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-5-6-symbol-2-8" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-6-symbol-3" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ><input autocomplete="off" id="word-6-symbol-4" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td><input autocomplete="off" id="word-6-symbol-5" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td><input autocomplete="off" id="word-6-symbol-6" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+           </tr>
+           <!--11 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-9" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+           <!--12 строка-->
+           <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><input autocomplete="off" id="word-5-symbol-10" style="width:25px;height:25px; text-align: center;" maxlength="1"></td>
+            <td ></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+           </tr>
+
+         </table>   
+         
+        </div>
+        
+    </div>
+    <div style=" text-align:center;max-width: 100%;flex-direction:column;margin-top:5rem;">
+    <a href="javascript:window.top.location.href='page2-3.html'" class="reload" > 
+        <button  class=" btn btn-primary "  > 
+            Завершить
+        </button>
+    </a>
+    </div>  
+
+    <!-- Button trigger modal -->
+
+
+
+
+<script src="../js/jquery-3.2.1.slim.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/game3.js"></script>
+<script> 
+document.querySelector("#help").click();
+</script>
+
+
+
+</body>
+</html>

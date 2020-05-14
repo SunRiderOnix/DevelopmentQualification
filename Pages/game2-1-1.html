@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     
     <style>
      p{
@@ -73,18 +74,20 @@
         margin:0.5rem; 
         margin-right:0px; 
         border-radius: 50px;
+        box-sizing: content-box;
+        line-height: 1;
      }
      
      
-     .container{
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: row;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-        justify-content: space-between;
-        margin:0;
+     .container-game{
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        padding-left: 0 !important;
+        margin-bottom: 0 !important;
+        justify-content: space-between !important;
+        margin:0 !important;
      }
 
 
@@ -178,7 +181,34 @@ fieldset:disabled a.btn {
     
 </head>
 <body>
-    <div class="container">
+  <button type="button" id="help" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="position: absolute; right:5%; bottom:5%;">
+    ?
+  </button>
+  <!-- Modal -->
+<div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Игра: Сопоставьте правильное</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p><b>Инструкция:</b></p>
+    <p>Необходимо перетащить слово или словосочетание к его определению.</p>
+    <p>Если слово или словосочетание совпадают с определением, определение окрашивается в зеленый.</p>
+    <p>Если не совпадают, то в красный.</p>
+    <p>Вернутся к инструкции можно с помощью знака вопроса</p>
+   
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+  </div>
+</div>
+</div>
+</div>
+    <div class="container-game">
         <div id="dragObject" style="text-align:center;max-width: 100%;flex-direction:row;display: flex;min-width: 800px;justify-content: center;">
             
             <div class="draggable" id="drag4" >
@@ -249,5 +279,12 @@ fieldset:disabled a.btn {
 <script src="../js/DropTarget.js"></script>
 <script src="../js/dragMaster.js"></script>
 <script src="../js/helpers.js"></script>
+<script src="../js/jquery-3.2.1.slim.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/util.js"></script>
+<script> 
+  document.querySelector("#help").click();
+  </script>
 </body>
 </html>
