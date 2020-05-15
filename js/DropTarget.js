@@ -54,14 +54,9 @@ function DropTarget(element) {
 		}
 		if (document.getElementsByClassName('uponMe')["length"] == 4) {
 			
-			setTimeout("alert('Поздравляю, все ответы верны');",200);
+			setTimeout("alert('Игра завершена, узнайте результаты');",200);
 			document.getElementsByClassName('reload')[0].style.display = "inline-block";
-			
-			
-			dragObjects = document.getElementsByClassName('draggable');
-       		for(var i=0; i<dragObjects.length; i++) {
-            new DragObject("")
-		}
+		
 
 		return
         }

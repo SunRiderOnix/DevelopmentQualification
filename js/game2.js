@@ -46,14 +46,15 @@ tree.onclick = function(event){
     event.target.style.bottom = "";
     document.getElementsByClassName('reload')[0].style.display = "block";
 
-        }
-
-    setTimeout(function test(){
-      if (document.getElementsByClassName('uponMe')["length"] == r){
-      alert ('Все ответы верны, поздравляю');
-      
-    }},250); 
+    }
     
+    setTimeout(function test2() {if (document.getElementsByClassName('uponMe')['length'] == r) {
+      alert ('Игра завершена');
+      return
+
+        }    },250
+    )
+
   }
   else if (event.target.id == "no-right") {
     if (document.getElementsByClassName('uponMe')["length"] == r){

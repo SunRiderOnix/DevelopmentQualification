@@ -4788,7 +4788,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem;
   background-color: #D4DAF7;
   border-color:#193DF0;
 }
@@ -4805,6 +4805,7 @@ input[type="button"].btn-block {
 .card-text:last-child {
   margin-bottom: 0;
   font-size:14pt;
+  line-height:1.20;
 }
 
 .card-link:hover {
@@ -6446,7 +6447,7 @@ a.close.disabled {
 
 .carousel {
   position: relative;
-  margin-bottom:40px;
+  margin-bottom:20px;
   box-shadow:0 0 10px 0 black;
 }
 
@@ -10363,7 +10364,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 }
 .inside-container{
-padding-top:70px;
+padding-top:4rem;
 }
 
 
