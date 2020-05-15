@@ -1,3 +1,15 @@
+let firstWord = "paint"
+let secondWord = ""
+let thirdWord = ""
+let fourthWord = ""
+let fifthford = ""
+let sixthWord = ""
+let seventhWord = ""
+let eighthWord = ""
+let ninethWord = ""
+let tenthWord = ""
+
+
 //Первое слово
 document.querySelector("#word-1-symbol-1").oninput = function() {
    if (

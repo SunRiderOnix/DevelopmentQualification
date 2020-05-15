@@ -189,7 +189,7 @@ fieldset:disabled a.btn {
 
 .reload {
   position:absolute;
-  left:44%;
+  left:50%;
   top:90%;
 }
 
@@ -240,10 +240,14 @@ fieldset:disabled a.btn {
         </button>
       </div>
       <div class="modal-body">
+        <p>Игра рассчитана на закрепление знаний полученных в рамках прохождения учебной практики.</p>
+        <p><b>Инструкция:</b></p>
         <p>Выберите с помощью левой кнопки мыши элементы подпадающие под условие:</p>
         <p>Основные компоненты системного блока</p>
         <p>Если ответ верный, элемент окрасится в зеленый и исчезнет</p>
         <p>Если не верный, элемент окрасится в красный</p>
+        <p>Независимо от результата вы можете закончить в любой момент</p>
+        <p>Для завершения игры достаточно нажать на кнопку «Завершить», после чего вы узнаете свой результат.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
@@ -254,34 +258,38 @@ fieldset:disabled a.btn {
         <div id="ClickObject" >
             
             
-            <p id="right" class="clickob" style="position: absolute; left:5%; top:5%;cursor: pointer; user-select: none;">Жесткий диск</p>
+          <p id="right" class="clickob" style="position: absolute; left:5%; top:5%;cursor: pointer; user-select: none;">Жесткий диск</p>
         
-            <p id="no-right" class="clickob" style="position: absolute; left:10%; top:30%;cursor: pointer;user-select: none; "  >Монитор</p>
-        
-            <p id="right" class="clickob"  style="position: absolute; left:60%; bottom:20%;cursor: pointer;user-select: none;" >Видеокарта</p>
-            
-            <p id="no-right" class="clickob"  style="position: absolute; left:45%; top:7%;cursor: pointer;user-select: none; ">Микрофон</p>
+          <p id="right" class="clickob" style="position: absolute; left:10%; top:30%;cursor: pointer;user-select: none; "  >Видеокарта</p>
+      
+          <p id="no-right" class="clickob"  style="position: absolute; left:60%; bottom:20%;cursor: pointer;user-select: none;" >Монитор</p>
+          
+          <p id="right" class="clickob"  style="position: absolute; left:45%; top:7%;cursor: pointer;user-select: none; ">Процессор</p>
 
-            <p id="right" class="clickob"  style="position: absolute; right:50%; bottom:25%;cursor: pointer;user-select: none;">Процессор</p>
+          <p id="right" class="clickob"  style="position: absolute; right:50%; bottom:25%;cursor: pointer;user-select: none;">Материнская плата</p>
 
-            <p id="right" class="clickob"  style="position: absolute; right:20%; bottom:50%;cursor: pointer;user-select: none;">Блок питания</p>
+          <p id="right" class="clickob"  style="position: absolute; right:20%; bottom:50%;cursor: pointer;user-select: none;">Блок питания</p>
 
-            <p id="right" class="clickob"  style="position: absolute; right:10%; bottom:5%;cursor: pointer;user-select: none;">Материнская плата</p>
+          <!--<p id="right" class="clickob"  style="position: absolute; right:10%; bottom:5%;cursor: pointer;user-select: none;"></p>-->
 
-            
-            <p id="no-right" class="clickob"  style="position: absolute; left:70%; top:15%;cursor: pointer;user-select: none; ">Наушники</p>
+          
+          <p id="no-right" class="clickob"  style="position: absolute; left:70%; top:15%;cursor: pointer;user-select: none; ">Наушники</p>
 
-            <p id="no-right" class="clickob"  style="position: absolute; left:5%; top:80%;cursor: pointer;user-select: none; ">Микрофон</p>
-
+          <p id="no-right" class="clickob"  style="position: absolute; left:5%; top:80%;cursor: pointer;user-select: none; ">Микрофон</p>
         </div>
         
     </div>
     <div style=" text-align:center;max-width: 100%;flex-direction:column;">
-    <a href="javascript:window.top.location.href='page2-2.html'" class="reload" > 
+    <a href="javascript:endGame()" class='reload' > 
         <button  class=" btn btn-primary " > 
             Завершить
         </button>
     </a>
+    <a href="javascript:window.location.reload()" class='reload' style="left:35%; bottom:5%;" > 
+      <button  class=" btn btn-primary " > 
+          Начать заново
+      </button>
+  </a>
     </div>  
 
 
@@ -292,6 +300,22 @@ fieldset:disabled a.btn {
 <script src="../js/util.js"></script>
 <script> 
   document.querySelector("#help").click();
+  let endGame = function(){
+  setTimeout(function test(){
+    if ((document.getElementsByClassName('uponMe')['length'] == r) && ( 1 >  document.getElementsByClassName('fail')['length'] )){
+    alert ('Все ответы верны, поздравляю');
+    window.top.location.href = "page2-2.html";} 
+    
+  else if (document.getElementsByClassName('fail')['length'] >= 1) { 
+    alert(`${document.getElementsByClassName('fail')['length']} не правильный(х) ответ(а)(ов)`)
+    window.top.location.href = "page2-2.html";
+  }
+    else if ((document.getElementsByClassName('fail')['length'] < 1) && (document.getElementsByClassName('uponMe')['length'] < r)){
+      alert(`Ваш результат: Ошибки: ${document.getElementsByClassName('fail')['length']}. Правильные ответы: ${document.getElementsByClassName('uponMe')['length']}`)
+      window.top.location.href = "page2-2.html";
+    }
+  },250);
+}
   </script>
 
 </body>

@@ -197,13 +197,12 @@ fieldset:disabled a.btn {
   <div class="modal-body">
     <p>Игра рассчитана на закрепление знаний полученных в рамках прохождения учебной практики.</p>
     <p><b>Инструкция:</b></p>
-    <p>Необходимо перетащить слово или словосочетание к его определению.</p>
-    <p>Если слово или словосочетание совпадают с определением, определение окрашивается в зеленый.</p>
+    <p>Необходимо перетащить слово или словосочетание к его описанию.</p>
+    <p>Если слово или словосочетание совпадают с описанием, описание окрашивается в зеленый.</p>
     <p>Если не совпадают, то в красный.</p>
     <p>Вернутся к инструкции можно с помощью знака вопроса</p>
     <p>Независимо от результата вы можете закончить в любой момент</p>
-      <p>Для завершения игры достаточно нажать на кнопку «Завершить», после чего вы узнаете свой результат.</p>
-   
+    <p>Для завершения игры достаточно нажать на кнопку «Завершить», после чего вы узнаете свой результат.</p>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
@@ -214,19 +213,19 @@ fieldset:disabled a.btn {
     <div class="container-game">
         <div id="dragObject" style="text-align:center;max-width: 100%;flex-direction:row;display: flex;min-width: 800px;justify-content: center;">
             
+            <div class="draggable" id="drag1" >
+                <p style="user-select: none; vertical-align: middle;">64-bit <br>архитектура</p>
+            </div>
+            
             <div class="draggable" id="drag4" >
-                <p style="user-select: none;">Операционная система</p>
+                <p style="user-select: none; vertical-align: middle;">Контроль пользовательской учетной записи (uac).</p>
+            </div>
+            <div class="draggable" id="drag3" >
+                <p  style="user-select: none;">Запуск и установка приложения.</p>
             </div>
             
             <div class="draggable" id="drag2" >
-                <p style="user-select: none;">Microsoft Windows</p>
-            </div>
-            <div class="draggable" id="drag1" >
-                <p  style="user-select: none;">Android</p>
-            </div>
-            
-            <div class="draggable" id="drag3" >
-                <p  style="user-select: none;">Linux</p>
+                <p  style="user-select: none;">Защищенный режим Internet Explorer</p>
             </div>
 
         </div>
@@ -235,21 +234,23 @@ fieldset:disabled a.btn {
         
             
             <div class="droppable" id="drop3" >
-                <p style="user-select: none;"> В начале 1990-х годов студент Хельсинкского университета Линус Торвальдс начал разработку ядра новой ОС для IBM-совместимых ПК, которое было названо Linux. В настоящее время GNU/Linux (совокупность различных дистрибутивов построенных на базе ядра Linux) стоит на втором месте по популярности среди ОС, используемых на рабочих столах пользователей (первое место принадлежит Microsoft Windows)</p>
+                <p style="user-select: none;"> Во время запуска и установки приложения помешать установке могут 2 проблемы:
+                  <br>1. Приложение пытается копировать файлы и ярлыки, которые были правомочны для предыдущей ос, но не существуют в новой
+                  <br>2. Приложение пытается сослаться на компоненты, которые в новой ОС были переименованы</p>
             </div>
             
             
             
             <div class="droppable" id="drop4" >
-                <p style="user-select: none;">комплекс программ, обеспечивающий управление аппаратными средствами компьютера, организующий работу с файлами и выполнение прикладных программ, осуществляющий ввод и вывод данных.</p>
+                <p style="user-select: none;">Uac увеличивает безопасность Windows, ограничивая доступ к ПК без уровня администратора, что ограничивает запуск приложения большинству пользователей.</p>
             </div>
 
             <div class="droppable" id="drop2" >
-                <p style="user-select: none;">это семейство операционных систем компании Microsoft. Была создана для компьютеров IBM с поддержкой MS-DOS.</p>
+                <p style="user-select: none;">Приложения, использующие Explorer и пытающиеся сделать запись на диск во время нахождения в интернете, могут вызвать сбой.</p>
             </div>
             
             <div class="droppable" id="drop1" >
-                <p style="user-select: none;">операционная система, основана на ядре Linux, предназначена для смартфонов, планшетов, электронных книг, цифровых проигрывателей, наручных часов, фитнесс-браслетов, игровых приставок, ноутбуков, нетбуков, смартбуков, очков Google Glass, телевизоров и других устройств (в 2015 году появилась поддержка автомобильных развлекательных систем и бытовых роботов).</p>
+                <p style="user-select: none;">Переход на 64-bit архитектуру может вызвать проблемы совместимости</p>
             </div>
     </div>
     </div>
@@ -299,15 +300,15 @@ fieldset:disabled a.btn {
     setTimeout(function test(){
     if ((document.getElementsByClassName('uponMe')['length'] == 4) && ( 1 >  document.getElementsByClassName('fail')['length'] )){
     alert ('Все ответы верны, поздравляю');
-    window.top.location.href = "page2-1.html";} 
+    window.top.location.href = "page2-4.html";} 
     
   else if (document.getElementsByClassName('fail')['length'] >= 1) { 
     alert(`${document.getElementsByClassName('fail')['length']} не правильных ответ(а)(ов)`)
-    window.top.location.href = "page2-1.html";
+    window.top.location.href = "page2-4.html";
   }
     else if ((document.getElementsByClassName('fail')['length'] < 1) && (document.getElementsByClassName('uponMe')['length'] < 4)){
       alert(`Ваш результат: Ошибки: ${document.getElementsByClassName('fail')['length']}. Правильные ответы: ${document.getElementsByClassName('uponMe')['length']}`)
-      window.top.location.href = "page2-1.html";
+      window.top.location.href = "page2-4.html";
     }
   },250);
 } 
